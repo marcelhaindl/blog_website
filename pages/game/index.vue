@@ -3,25 +3,23 @@
         <h1>The Guesser Game</h1>
         <div>
             <section>
-                <GeneralButton color="primary">New Deck</GeneralButton>
-                <!-- Keep track of deck id -->
-                <p>Deck ID: {{ deckId }}</p>
+                <p class="text-neutral-500 mt-2">Deck ID: {{ deckId }}</p>
 
-                <div v-if="deckId" role="group" aria-label="Color Picker">
+                <div v-if="deckId" class="mt-8 flex flex-row gap-x-4">
                     <Button color="danger" type="button" @click="setGuess('red')">Pick
                         Red</Button>
                     <Button color="dark" type="button" @click="setGuess('black')">Pick
                         Black</Button>
                 </div>
 
-                <p v-if="guess">Current Pick: <strong>{{ guess }}</strong></p>
+                <p v-if="guess" class="mt-4">Current Pick: <strong>{{ guess }}</strong></p>
 
                 <!-- Show the score -->
-                <h2 v-if="deckId">{{ score }} Points</h2>
+                <h2 v-if="deckId" class="mt-6">{{ score }} Points</h2>
 
-                <Button color="primary" v-if="guess" @click="drawCard()">Draw Card</Button>
+                <Button class="mt-6" color="primary" v-if="guess" @click="drawCard()">Draw Card</Button>
             </section>
-            <section>
+            <section class="mt-8">
                 <!-- Show the drawn card -->
                 <div v-if="card">
                     <img :src="card.image" :alt="card.code">
