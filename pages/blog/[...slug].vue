@@ -55,10 +55,6 @@ useHead({
             <article>
                 <!-- render document coming from query -->
                 <ContentRenderer :value="data.article">
-                    <!-- render rich text from document
-          <MarkdownRenderer :value="data.article" /> -->
-
-                    <!-- display if document content is empty -->
                     <template #empty>
                         <p>No content found.</p>
                     </template>
@@ -90,9 +86,5 @@ article {
 
 .article-tags {
     @apply mt-4
-}
-
-.subtext {
-    @apply text-neutral-500 mt-1
 }
 </style>

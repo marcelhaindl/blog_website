@@ -52,7 +52,7 @@ main {
 }
 
 .article-tags .tag {
-    @apply bg-slate-100 text-slate-700 text-sm p-2 py-1 rounded-md;
+    @apply bg-neutral-300 text-neutral-800 text-sm p-2 py-1 rounded-md;
     @apply transition-all !py-0.5 hover:-translate-y-0.5;
 }
 
@@ -70,4 +70,8 @@ main {
 
 .img-cont img {
     @apply h-full w-full object-cover;
+}
+
+.subtext {
+    @apply text-neutral-500 mt-1
 }
