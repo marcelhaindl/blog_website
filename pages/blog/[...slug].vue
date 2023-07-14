@@ -99,12 +99,12 @@ aside .toc {
 
 /* The table of contents takes 2 column of the total 8 */
 aside {
-    @apply col-span-full md: col-span-2 row-start-1 w-full pt-14;
+    @apply col-span-full md:col-span-2 row-start-1 w-full pt-14;
 }
 
 /* The article itself takes 6 columns of the total 8 */
 article {
-    @apply col-span-full md: col-span-6 md:col-start-1 md:row-start-1 prose w-full;
+    @apply col-span-full md:col-span-6 md:col-start-1 md:row-start-1 prose w-full;
 }
 
 /* The article tags need to have a top margin of 4 */

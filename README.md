@@ -1,6 +1,5 @@
-# Nuxt 3 Minimal Starter
-
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+# Marcel Haindl (cc221005) FWOC Project
+The project displays the soundboard and the game we did in class and also a new item, called blog. The Blog item is used to display different blogs using Markdown (md) files. By using markdown files it is easy to add more and more blogs to the app by simply adding several md files to the `/content/blog` folder inside the project.
 
 ## Setup
 
@@ -32,32 +31,3 @@ pnpm run dev
 yarn dev
 ```
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
