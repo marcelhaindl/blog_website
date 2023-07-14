@@ -5,6 +5,7 @@ img: 'https://woz-u.com/wp-content/uploads/2022/06/Evolution-of-Coding-scaled.jp
 tags: [Project, Todo App, Productivity]
 ---
 
+
 ## Introduction
 
 The Todo App project aims to develop a user-friendly and efficient application to manage tasks and enhance productivity. With this app, users can easily create, organize, and track their to-do lists, ensuring that nothing falls through the cracks. Join us on this exciting journey as we build a practical tool that helps users stay organized and focused.
