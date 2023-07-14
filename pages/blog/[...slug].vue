@@ -1,4 +1,4 @@
-<!-- ./pages/blog/[…slug.vue] -->
+<!-- ./pages/blog/[...blog.vue] -->
 
 <script setup>
 const { path } = useRoute();
