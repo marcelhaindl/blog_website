@@ -1,35 +1,49 @@
-<!-- ./components/Toc.vue -->
+<!-- Table of contents -->
 
 <script setup>
-// define links prop
+// Define input links
 defineProps(["links"]);
 
-// flatten TOC links nested arrays to one array
+// Helper function to flatten all links into one level (no hierarchy)
+// The hierarchy is later done with the depth value inside the links
 const flattenLinks = (links) => {
+  // _links variable that maps through all the links
   let _links = links
     .map((link) => {
+      // Saves each link into a new array
       let _link = [link];
+      // If the link has any children...
       if (link.children) {
+        // ... Then recursively call the function again to flatten the children
         let flattened = flattenLinks(link.children);
+        // Then add the flattened links to the previously created link array
         _link = [link, ...flattened];
       }
+      // And return the _link variable so the the upper one can use it
       return _link;
     })
+    // And set the depth to 1
     .flat(1);
 
-  console.log({ _links });
-
+  // Finally return the _links variable from the function
   return _links;
 };
 </script>
 
 <template>
+  <!-- Creates a new table of content navigation -->
   <nav class="toc">
+    <!-- Creates the header "Table of contents" -->
     <header class="toc-header">
       <h3 class="text-xl font-bold">Table of contents</h3>
     </header>
+    <!-- Creates a list of links below the header -->
     <ul class="toc-links">
-      <!-- render each link with depth class -->
+      <!-- For each link, create a new link,
+           with the id value as its key to make it unique;
+           with the depth value as its class to ensure depth inside the table of contents;
+           with the link to the corresponding headline;
+           and with the text of the link. -->
       <li v-for="link of flattenLinks(links)" :key="link.id" :class="`toc-link _${link.depth}`">
         <a :href="`#${link.id}`">
           {{ link.text }}

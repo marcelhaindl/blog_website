@@ -1,3 +1,5 @@
+<!-- Game -->
+
 <template>
     <main>
         <h1>The Guesser Game</h1>

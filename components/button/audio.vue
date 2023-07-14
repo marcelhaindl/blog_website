@@ -7,20 +7,25 @@
 <script setup>
 import { ref } from "vue";
 
+// Define sound input
 const props = defineProps(["sound"]);
 
+// Change sountext from "clap" to "Clap"
 const soundText = computed(() => {
     return props.sound.charAt(0).toUpperCase() + props.sound.slice(1)
 })
-const audioTag = ref();
 
+// Reference variables
+const audioTag = ref();
 const isPlaying = ref(false);
 
+// Plays the sound
 const playSound = () => {
     isPlaying.value = true;
     audioTag.value.play();
 }
 
+// Sets the isPlaying value to false if sound finished
 const ended = () => {
     isPlaying.value = false;
 }

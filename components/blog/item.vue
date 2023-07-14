@@ -21,7 +21,6 @@
 </template>
 
 <script setup>
-
+// Get inputs
 const props = defineProps(["to", "img", "title", "description", "tags"])
-
 </script>
